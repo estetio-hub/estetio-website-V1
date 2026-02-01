@@ -140,9 +140,19 @@
         }
 
         /* SINGLE IMAGE VISUAL CONTAINER (Used across all sections now) */
-        .role-visual-container { position: relative; height: 600px; width: 100%; display: flex; align-items: center; justify-content: center; }
+        /* REVISI: Menghapus fixed height agar gambar tidak terpotong */
+        .role-visual-container { 
+            position: relative; 
+            width: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        
+        /* REVISI: Gambar menyesuaikan tinggi aslinya (auto) */
         .role-img-main { 
-            width: 80%; height: 90%; object-fit: cover;
+            width: 100%; 
+            height: auto; 
             border: 1px solid rgba(255,255,255,0.1); 
             transition: 0.4s; 
         }
@@ -351,7 +361,8 @@
             
             .intention-grid, .clarity-grid, .role-grid, .what-we-do-grid { grid-template-columns: 1fr; gap: 60px; }
             
-            .role-visual-container { height: 400px; margin-top: 40px; }
+            /* REVISI: Mobile height jadi auto */
+            .role-visual-container { height: auto; margin-top: 40px; }
             
             .clarity-grid .role-visual-container { order: 2; }
             .clarity-grid .clarity-content { order: 1; }
