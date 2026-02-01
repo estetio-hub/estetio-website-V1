@@ -336,7 +336,14 @@
         .nav-links { display: flex; gap: 40px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; list-style: none; font-weight: 500;}
         .nav-links a:hover { opacity: 0.8; color: var(--accent); }
         .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-main); }
-        .hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 60px; position: relative; overflow: hidden; }
+        
+        /* REVISI BANNER: Full 100vh height */
+        .hero { 
+            height: 100vh; /* Changed from min-height: 90vh to force full screen */
+            display: flex; align-items: center; justify-content: center; 
+            text-align: center; padding-top: 60px; 
+            position: relative; overflow: hidden; 
+        }
         .hero-center { max-width: 850px; margin: 0 auto; position: relative; z-index: 5; }
         .hero-title { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-shadow: 0 0 30px rgba(0,0,0,0.5); }
         .hero-title span { font-style: italic; opacity: 0.6; }
@@ -351,7 +358,8 @@
             .hero-title { font-size: 2.8rem; }
             .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 50px; }
             .container { padding: 0 25px; }
-            .hero { padding-top: 100px; padding-bottom: 60px; min-height: auto;}
+            /* REVISI MOBILE: Full 100vh on mobile too */
+            .hero { padding-top: 100px; padding-bottom: 60px; height: 100vh;}
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
             .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
 
@@ -381,8 +389,9 @@
 <body>
 
     <nav>
+        <!-- FIXED: Increased logo size -->
         <a href="#" class="logo">
-            <img src="assets/logo-header.png" alt="Estetio" style="height: 28px; width: auto;">
+            <img src="assets/logo-header.png" alt="Estetio" style="height: 45px; width: auto;">
         </a>
 
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -751,7 +760,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="assets/logo-footer.png" alt="Estetio Logo" style="height: 35px; margin-bottom: 20px;">
+                    <!-- FIXED: Increased logo size -->
+                    <img src="assets/logo-footer.png" alt="Estetio Logo" style="height: 55px; margin-bottom: 20px;">
                     <p>The quiet force behind clinic growth. Engineering dominance through data, technology, and superior strategy.</p>
                 </div>
                 
